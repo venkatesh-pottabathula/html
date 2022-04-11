@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <style>
+            #object{
+                width : 100%;
+                background-color: blue;
+            }
+            #item{
+                width : 1%;
+                height : 30px;
+                background-color:  aquamarine;
+            }
+        </style>
+        <body>
+            <div id="object">
+                <div id="item"></div>
+            </div>
+            <button onclick="pass()">Submit</button>
+            <script>
+                var j = 0;
+                function pass() {
+                    if(j==0) {
+                        j=1;
+                        var o1 = document.getElementById("object");
+                        var width = 1;
+                        var id = setInterval(frame,3000);
+                        function frame() {
+                            if(width >= 100) {
+                                clearInterval(id);
+                                j=0;
+                            } else {
+                                width++;
+                                o1.style.width = width+"%";
+                            }
+                        }
+                    }
+                }
+            </script>
+        </body>
+    </head>
+</html>

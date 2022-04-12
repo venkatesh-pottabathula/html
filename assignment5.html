@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script>
+        function venky(){
+            if(typeof(Storage)!=="undefined"){
+                if(localStorage.scontent){
+                    localStorage.scontent=localStorage.scontent+"<tr><td>"+new Date()+"</td></tr>";
+                }
+                else{
+                    localStorage.scontent="<tr><td>"+new Date()+"</td></tr>";
+                }
+                document.getElementById("shiva").innerHTML="<table>"+localStorage.scontent+"</table>";
+            }
+            else{
+                document.getElementById("shiva").innerHTML="sorry";
+            }
+        }
+        </script>
+         </head>
+        <body>
+            <p><button onclick="venky()" type="button">Click Me</button></p>
+            <div id="shiva"></div>
+        </body>
+   
+</html>

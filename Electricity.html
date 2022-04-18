@@ -1,0 +1,52 @@
+ <!-- // Write a JavaScript program to input electricity unit charge and calculate the total electricity bill according to the given condition:
+// For first 50 units Rs. 0.50/unit
+// For next 100 units Rs. 0.75/unit
+// For next 100 units Rs. 1.20/unit
+// For unit above 250 Rs. 1.50/unit. An additional surcharge of 20% is added to the bill.
+// For example, input: 20 units then bill is Rs10
+// Total Units: 300
+// 50 * 0.5 = 25
+// 100 * 0.75 = 75
+// 100 * 1.2 = 120
+// 50 * 1.5 = 75
+// Total = 295 + 20% surcharge on 295
+// Result = INR 354 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script>
+        var units = prompt("Enter consumed units:")
+        if (units <= 50) {
+            totalBill = normalCharge = (units * 0.50)
+            document.write("total bill amount is INR:" + totalBill + " ")
+
+        }
+        else if (units <= 150) {
+            totalBill = 50 * 0.50 + (units - 100) * 0.75
+            document.write("total bill amount is INR:" + totalBill + "  ")
+        }
+        else if (units <= 250) {
+            totalBill = 50 * 0.50 + 100 * 0.75 + (units - 250) * 0.75
+            document.write("total bill amount is INR:" + totalBill + "  ")
+        }
+        else {
+            normalCharge = 50 * 0.50 + 100 * 0.75 + 100 * 1.2 + (units - 250) * 1.5
+            document.write("normal charge is INR:" + normalCharge)
+            document.write("<br>");
+            surCharge = normalCharge * 0.20
+            document.write("surcharge is INR:" + surCharge)
+            document.write("<br>");
+            totalBill = normalCharge + surCharge
+            document.write("total bill amount is INR:" + totalBill)
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

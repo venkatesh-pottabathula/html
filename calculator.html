@@ -1,0 +1,49 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <script>
+
+        let result;
+        const number1 = parseFloat(prompt('Enter first number: '));
+        const operator = prompt('Enter operator ( either +, -, * or / ): ');
+        const number2 = parseFloat(prompt('Enter second number: '));
+
+        switch (operator) {
+            case '+':
+                result = number1 + number2;
+                document.write(`${number1} + ${number2} = ${result}`)
+                break;
+
+            case '-':
+                result = number1 - number2;
+                document.write(`${number1} - ${number2} = ${result}`)
+                break;
+
+            case '*':
+                result = number1 * number2;
+                document.write(`${number1} * ${number2} = ${result}`)
+                break;
+
+            case '/':
+                result = number1 / number2;
+                document.write(`${number1} / ${number2} = ${result}`)
+                break;
+
+            default:
+                document.write('Invalid operator');
+                break;
+        }
+    </script>
+
+
+
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+    </style>
+    <script>
+        function checkCharacter() {
+            var ch = document.getElementById("char").value;
+            switch (ch) {
+
+                case ch:
+                    if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
+                        if (ch == 'a' || ch == 'e' || ch == 'o' || ch == 'i' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
+
+                            document.getElementById("res").innerHTML = "Enter character is vowel"
+                        }
+                        else {
+                            document.getElementById("res").innerHTML = "Enter character is consonant"
+                        }
+
+                    }
+                    else {
+                        document.getElementById("res").innerHTML = "Enter character is not an alphabet"
+
+                    }
+                    break;
+                default:
+                    document.getElementById("res").innerHTML = "Enter character is not an alphabet"
+                    break;
+            }
+
+        }
+    </script>
+</head>
+
+<body >
+    <p>Enter the character:<input id="char"><button onclick="checkCharacter()">Check</button></p>
+    <p id="res"></p>
+</body>
+
+</html>
